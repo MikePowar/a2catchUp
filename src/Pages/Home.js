@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import MessageBoardDisplay from './MessageBoardDisplay';
+import MessageBoardDisplay from '../components/MessageBoardDisplay';
+import { connect } from 'react-redux';
+
 
 class Home extends Component { 
     
     render(){
+        console.log(this.props)
         return (
         <div>
             <h4>HOME</h4>
@@ -16,4 +19,10 @@ class Home extends Component {
     }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+    return {
+        messages: state.messages
+    }
+}
+
+export default connect(mapStateToProps)(Home)

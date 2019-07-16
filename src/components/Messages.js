@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,11 @@ import { Link } from 'react-router-dom';
 //RETURNS messageList - as Message *** SHOULD MESSAGE name be changed ?
 // the returned list is what gets rendered as a component which contains messages & delete message within it.
 
-const Messages = ({messages, deleteMessage}) => {
+class Messages extends Component {
+    render() {
+        console.log(this.props)
+        const { messages } = this.props;
+//const Messages = ({messages, deleteMessage}) => {
     //create a list by mapping through messages and return the message to be displayed
     //calling a map function on each message in the array so each message is displayed.
     const messageList = messages.length ? (
@@ -19,7 +23,7 @@ const Messages = ({messages, deleteMessage}) => {
                         <div>Name:{ message.Name } </div>
                         <div>Message:{ message.Message } </div>
                         </Link>
-                        <button onClick={() => {deleteMessage(message.id)}}>Delete message</ button>
+                        {/* <button onClick={() => {deleteMessage(message.id)}}>Delete message</ button> */}
                     </div>
                 )
                 })
@@ -29,7 +33,14 @@ const Messages = ({messages, deleteMessage}) => {
                 { messageList }
             </div>
         )
-    }
+        }
+        }
+        
 
+const mapStateToProps = (state) => {
+    return {
+        messages: state.messages
+    }
+}
  
-export default connect()(Messages)
+export default connect(mapStateToProps)(Messages)

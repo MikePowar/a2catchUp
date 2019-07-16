@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
+import Home from '../Pages/Home';
+import About from '../Pages/About';
 import ClickedMessage from './ClickedMessage';
 
 
