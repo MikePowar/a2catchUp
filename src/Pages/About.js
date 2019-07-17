@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const About = () => {
+class About extends Component {
+render(){
+    console.log(this.props)
     return (
         <div>
             <h4>ABOUT</h4>
@@ -9,6 +11,7 @@ const About = () => {
             </p>
         </div>
     )
+}
 }
 
 export default About

@@ -2,28 +2,23 @@ import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-// a functional component: that returns a template div - that outputs from app component via props
-// messages are received by Message below as a messages prop (state set in App.js)
-
 //RETURNS messageList - as Message *** SHOULD MESSAGE name be changed ?
 // the returned list is what gets rendered as a component which contains messages & delete message within it.
 
 class Messages extends Component {
     render() {
-        console.log(this.props)
         const { messages } = this.props;
-//const Messages = ({messages, deleteMessage}) => {
-    //create a list by mapping through messages and return the message to be displayed
-    //calling a map function on each message in the array so each message is displayed.
     const messageList = messages.length ? (
         messages.map(message => {
                 return (
                     <div className="message" key={ message.id }>
-                        <Link to={'/' + message.id }>
-                        <div>Name:{ message.Name } </div>
-                        <div>Message:{ message.Message } </div>
+                        <Link to={'/messages/' + message.id }>
+                        <div>Name:{ message.name } </div>
+                        <div>Message:{ message.message } </div>
                         </Link>
-                        {/* <button onClick={() => {deleteMessage(message.id)}}>Delete message</ button> */}
+                        <button onClick={() => {this.props.deleteMessage(message.id)}}>
+                            Delete Message
+                        </button>
                     </div>
                 )
                 })
@@ -37,10 +32,15 @@ class Messages extends Component {
         }
         
 
-const mapStateToProps = (state) => {
+    const mapStateToProps = (state) => {
     return {
         messages: state.messages
+    } }
+
+    const mapDispatchToProps = (dispatch) => {
+        return {
+            deleteMessage: (id) => { dispatch ({ type: 'DELETE_MESSAGE', id: id }) }
+        }
     }
-}
- 
-export default connect(mapStateToProps)(Messages)
+
+export default connect(mapStateToProps,mapDispatchToProps)(Messages)

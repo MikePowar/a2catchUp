@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addMessage } from './../actions/index';
 
 class AddMessage extends Component{
-    state = {
-        Name: null,
-        Message: null
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            message: '',
+            id: ''
+        //  id: Math.floor(Math.random() * 2000)
+        };
+        console.log(this.state)
     }
 
     handleChange = (e) => {
@@ -14,7 +22,13 @@ class AddMessage extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addMessage(this.state);
+        console.log(this.state);
+        const newState = {
+            ...this.state,
+            id: Math.random()
+        }
+        console.log(newState);
+        this.props.addMessage(newState);
     }
     
     render(){
@@ -22,10 +36,10 @@ class AddMessage extends Component{
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Name:</label>
-                    <input type="text" id="Name" onChange={this.handleChange} />
+                    <input type="text" id="name" onChange={this.handleChange} />
 
                     <label htmlFor="name">Message:</label>
-                    <input type="text" placeholder="write something" id="Message" onChange={this.handleChange} />
+                    <input type="text" placeholder="write something" id="message" onChange={this.handleChange} />
 
                     <button>Submit</button>
                 </form>
@@ -34,4 +48,16 @@ class AddMessage extends Component{
     }
 }
 
-export default AddMessage;
+const mapStateToProps = (state) => {
+    return {
+        messages: state.messages
+    }}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addMessage: (id) => { dispatch (addMessage(id)) }
+        }
+    }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddMessage);

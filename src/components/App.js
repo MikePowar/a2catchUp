@@ -11,14 +11,15 @@ class App extends Component {
 
   render(){
     return (
+
       <BrowserRouter>
         <div className="App">
           <Navbar />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/:message_id" component={ClickedMessage} />
+          <Route path="/messages/:message_id" component={ClickedMessage} />
+          
         </div>
-
       </BrowserRouter>
 
     );
