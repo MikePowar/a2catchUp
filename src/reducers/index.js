@@ -16,19 +16,17 @@ const messageReducer = (state = initialMessages, action) => {
                 return action.id !== message.id
             });
             return {
-                    messages: newMessages
+                messages: newMessages
                 };
         
         case 'ADD_MESSAGE':
             const newState = state.messages.slice(0);
             newState.push(action.payload);
-            console.log(newState)
             return {
                 messages: newState
             }
 
         default: 
-            console.log('Default state')
             return state;
     }
 }
