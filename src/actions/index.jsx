@@ -1,15 +1,11 @@
 export const ADD_MESSAGE = 'ADD_MESSAGE'
-export const TOGGLE_MESSAGE = 'TOGGLE_MESSAGE'
 export const DELETE_MESSAGE = 'DELETE_MESSAGE'
 
+// not used in setup as is because actions are called in components and then adjusted
+// in reducer.
 
 export function addMessage(message){
-    console.log(message)
     return { type: ADD_MESSAGE, payload: message }
-}
-
-export function toggleMessage(message){
-    return { type: TOGGLE_MESSAGE, payload: message }
 }
 
 //pass index or message

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Messages from './Messages';
-import MesageBoardDisplay from './MessageBoardDisplay';
+
 
 class ClickedMessage extends Component {
 
     render(){
+        console.log(this.props);
         let id = this.props.match.params.message_id;
         const parseId = parseInt(id);
         const result = this.props.messages.find(message => (message.id === parseId));
@@ -28,9 +28,8 @@ class ClickedMessage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        messages: state.messages
+        messages: state.backend.messages
     }
 }
-
 
 export default connect(mapStateToProps)(ClickedMessage);

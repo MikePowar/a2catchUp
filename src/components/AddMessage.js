@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addMessage } from './../actions/index';
 
+
+
 class AddMessage extends Component{
     constructor(props){
         super(props);
@@ -9,9 +11,7 @@ class AddMessage extends Component{
             name: '',
             message: '',
             id: ''
-        //  id: Math.floor(Math.random() * 2000)
         };
-        console.log(this.state)
     }
 
     handleChange = (e) => {
@@ -22,12 +22,12 @@ class AddMessage extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        let idGenerator = Math.floor(Math.random() *20000);
         const newState = {
             ...this.state,
-            id: Math.random()
+            id: idGenerator
         }
-        console.log(newState);
+        console.log(this.props);
         this.props.addMessage(newState);
     }
     
@@ -50,14 +50,13 @@ class AddMessage extends Component{
 
 const mapStateToProps = (state) => {
     return {
-        messages: state.messages
+        messages: state.backend.messages
     }}
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addMessage: (id) => { dispatch (addMessage(id)) }
+        addMessage: (newState) => { dispatch (addMessage(newState)) }
         }
     }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddMessage);

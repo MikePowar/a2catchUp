@@ -7,7 +7,6 @@ class Home extends Component {
     
     render(){
         console.log(this.props)
-        
         return (
         <div>
             <h4>HOME</h4>
