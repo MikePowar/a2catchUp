@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addMessage } from './../actions/index';
+//import { addMessageAxios } from './../actions/index';
 
 
 
@@ -27,8 +28,10 @@ class AddMessage extends Component{
             ...this.state,
             id: idGenerator
         }
-        console.log(this.props);
+        console.log(newState);
         this.props.addMessage(newState);
+        console.log(this.props);
+        //this.props.addMessageAxios(newState);
     }
     
     render(){
@@ -56,6 +59,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addMessage: (newState) => { dispatch (addMessage(newState)) }
+        //addMessageAxios: (newState) => {dispatch (addMessageAxios(newState))}
         }
     }
 

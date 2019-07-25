@@ -1,11 +1,13 @@
 import { FETCH_MESSAGES_BEGIN, FETCH_MESSAGES_FAULURE, FETCH_MESSAGES_SUCCESS } from '../actions/backendActions';
 import { ADD_MESSAGE } from "../actions";
 import { DELETE_MESSAGE } from "../actions";
+import { ADD_MESSAGE_SUCCESS, ADD_MESSAGE_FAILURE, ADD_MESSAGE_STARTED } from '../actions/index';
 
 const initState = {
     messages: [],
     loading: false,
-    error: null
+    error: null,
+    loading: false
 };
 
 const backendReducer = (state = initState, action) => {
@@ -48,14 +50,37 @@ const backendReducer = (state = initState, action) => {
                 return {
                     messages: newMessages
                     };
-                
-        case 'ADD_MESSAGE':
-                console.log(action);
-                const newState = state.messages.slice(0);
-                newState.push(action.payload);
-                return {
-                    messages: newState
-                    };
+        //TODO: Get one AddMessage working        
+        // case 'ADD_MESSAGE':
+        //         console.log(action);
+        //         const newState = state.messages.slice(0);
+        //         newState.push(action.payload);
+        //         return {
+        //             messages: newState
+        //             };
+        //TODO: new cases for adding Messages with post request from tutorial ()
+        case 'ADD_MESSAGE_STARTED':
+            return {
+                ...state,
+                loading: true
+            };
+        case 'ADD_MESSAGE_SUCCESS':
+                //const newState = state.messages.slice(0);
+                //newState.push(action.payload);    
+            return {
+                    //TODO: FIX THIS
+                    ...state,
+                    messages: [...state.messages, action.payload],
+                    //messages: newState,
+                    loading: false,
+                    error: null
+                };
+        case 'ADD_MESSAGE_FAILURE':
+            return {
+                ...state,
+                loading: false,
+                error: action.payload.error
+            };
         default:
             return state;
         }

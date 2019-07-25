@@ -12,7 +12,7 @@ class MessageBoardDisplay extends Component {
     }
 
     render(){
-        console.log(this.props);
+        console.log(this);
         const { error, loading, messages } = this.props;
         console.log(messages)
         

@@ -1,8 +1,6 @@
 export const createMessages = (message) => {
     return (dispatch, getState) => {
         //make async call to database
-
-        
         dispatch ({ type: 'CREATE_MESSAGES', message: message });
     }
 };
