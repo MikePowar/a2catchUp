@@ -37,13 +37,16 @@ class AddMessage extends Component{
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" onChange={this.handleChange} />
+                <form className="submissionBox" onSubmit={this.handleSubmit}>
+                    <div>
+                        <label htmlFor="name">Artist:</label>
+                        <input type="text" id="name" onChange={this.handleChange} />
+                    </div>
 
-                    <label htmlFor="name">Message:</label>
-                    <input type="text" placeholder="write something" id="message" onChange={this.handleChange} />
-
+                    <div>
+                        <label htmlFor="message">Lyrics:</label>
+                        <input type="text" placeholder="enter lyrics here" id="message" onChange={this.handleChange} />
+                    </div>
                     <button>Submit</button>
                 </form>
             </div>

@@ -2,6 +2,7 @@ import { FETCH_MESSAGES_BEGIN, FETCH_MESSAGES_FAULURE, FETCH_MESSAGES_SUCCESS } 
 import { ADD_MESSAGE } from "../actions";
 import { DELETE_MESSAGE } from "../actions";
 import { ADD_MESSAGE_SUCCESS, ADD_MESSAGE_FAILURE, ADD_MESSAGE_STARTED } from '../actions/index';
+import axios from 'axios';
 
 const initState = {
     messages: [],
@@ -43,13 +44,29 @@ const backendReducer = (state = initState, action) => {
                 messages: action.payload.messages
             };
         case 'DELETE_MESSAGE':
-                console.log(action);  
+                console.log(action);
                 let newMessages = state.messages.filter(message => {
-                return action.id !== message.id
-                    });
-                return {
-                    messages: newMessages
-                    };
+                    return action.id !== message.id
+                        });
+                    return {
+                        messages: newMessages
+                        };
+                // axios.
+                //     delete('/messages', action.id)
+                //     .then(res => {
+                //         let newMessages = state.messages.filter(message => {
+                //             return action.id !== message.id
+                //                 });
+                //             return {
+                //                 messages: newMessages
+                //             };
+                //     })
+                //     .catch(err => {
+                //         console.log(err)
+                //     });
+                
+                
+                
         //TODO: Get one AddMessage working        
         // case 'ADD_MESSAGE':
         //         console.log(action);

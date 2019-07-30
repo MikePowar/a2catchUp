@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 const messages = ({messages, deleteMessage}) => {
     console.log(messages);
@@ -15,7 +16,16 @@ const messages = ({messages, deleteMessage}) => {
                             <div>Name:{ message.name } </div>
                             <div>Message:{ message.message } </div>
                         </Link>
-                        <button onClick={() => {deleteMessage(message.id)}}>
+                        {/* <button onClick={() => {deleteMessage(message.id)}}> */}
+                        <button onClick={() => Axios.delete(`/messages/${message.id}`, { data: message.id })
+                            .then(res => {
+                                console.log(res);
+                                console.log(res.data);
+                                deleteMessage(message.id);
+                            })
+                            .catch(err => {
+                                console.log(err);
+                            })}>
                             Delete Message
                         </button>
                     </div>

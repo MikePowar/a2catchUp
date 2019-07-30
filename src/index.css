@@ -20,10 +20,19 @@ code {
 
 .messageList {
   width: 16.55em;
-  border: 20px solid #456;
+  border: 20px solid #6395F2;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.submissionBox {
+  border: 20px solid #0A337F;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-top: 20px;
+  max-width: 500px;
 }
 
 .addMessage {
@@ -35,13 +44,67 @@ input[type=text]{
   resize: vertical;
 }
 
-input[id=Name]{
+input[id=name]{
   margin: 10px;
+  box-sizing: border-box;
 }
 
-input[id=Message] {
-  width: 20em;
+input[id=message] {
+  width: 30em;
   padding: 12px 10px;
   margin: 8px 15px;
   box-sizing: border-box;
+}
+
+/* new css styling */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #091834;
+  text-align: right;
+  border: 1px solid #091834;
+  height: 40px;
+}
+
+li {
+  display: inline;
+  text-align: justify;
+  
+}
+
+li a {
+  display: block inline;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: justify;
+  border: 5px;
+  font-size: 1.7em;
+}
+
+li a:hover {
+  background-color: #235DC7;
+}
+
+h1 {
+  padding: 10px 16px;
+  font-size: 2.0em;
+}
+
+h4 {
+  padding: 2.5px 2.5px;
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+form{
+  padding: 14px 16px;
+  position: relative;
+  text-align: center;
+
 }
