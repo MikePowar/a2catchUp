@@ -37,7 +37,7 @@ export const addMessage = ({name, message, id}) => {
 
     //TODO: note: those aren't quotation marks for http address
     axios
-        .post('/messages', {
+        .post('/api/messages', {
         name,
         message,
         id

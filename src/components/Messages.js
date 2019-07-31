@@ -10,18 +10,18 @@ const messages = ({messages, deleteMessage}) => {
             { messages && messages.map(message => {
                 return (
                     
-                    <div className = "message" key ={message.id}>
+                    <div className = "message" key ={message._id}>
                         
-                        <Link to={'/messages/' + message.id }>
+                        <Link to={'/messages/' + message._id }>
                             <div>Name:{ message.name } </div>
                             <div>Message:{ message.message } </div>
                         </Link>
                         {/* <button onClick={() => {deleteMessage(message.id)}}> */}
-                        <button onClick={() => Axios.delete(`/messages/${message.id}`, { data: message.id })
+                        <button onClick={() => Axios.delete(`/api/messages/${message._id}`, { data: message._id })
                             .then(res => {
                                 console.log(res);
                                 console.log(res.data);
-                                deleteMessage(message.id);
+                                deleteMessage(message._id);
                             })
                             .catch(err => {
                                 console.log(err);

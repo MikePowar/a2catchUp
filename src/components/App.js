@@ -16,7 +16,7 @@ class App extends Component {
           <Navbar />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/messages/:message_id" component={ClickedMessage} />
+          <Route path="/messages/:_id" component={ClickedMessage} />
           
         </div>
       </BrowserRouter>

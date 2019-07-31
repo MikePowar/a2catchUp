@@ -26,7 +26,7 @@ export const fetchMessagesFailure = error => ({
 export function fetchMessages() {
     return dispatch => {
         dispatch(fetchMessagesBegin());
-        return fetch('/messages')
+        return fetch('/api/messages')
             .then(handleErrors)
             .then(res => 
                 res.json())

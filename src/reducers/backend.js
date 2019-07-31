@@ -7,8 +7,7 @@ import axios from 'axios';
 const initState = {
     messages: [],
     loading: false,
-    error: null,
-    loading: false
+    error: null
 };
 
 const backendReducer = (state = initState, action) => {
@@ -46,7 +45,7 @@ const backendReducer = (state = initState, action) => {
         case 'DELETE_MESSAGE':
                 console.log(action);
                 let newMessages = state.messages.filter(message => {
-                    return action.id !== message.id
+                    return action.id !== message._id
                         });
                     return {
                         messages: newMessages
