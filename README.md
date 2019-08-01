@@ -6,11 +6,11 @@ REACT / REDUX
 
 1. [x] Use React and Redux and start assignment with boilerplate create-react-app code
 2. [x] Text-input area - to write message
-3. [x]Button - to add message to the list
-4. [x]preloaded message list data stored in reducer
-5. [x]List of messages - updated with each new added message
-6. [x]Basic styling
-7. [x]Detail view: ~~pop up~~ or **separate page**
+3. [x] Button - to add message to the list
+4. [x] preloaded message list data stored in reducer
+5. [x] List of messages - updated with each new added message
+6. [x] Basic styling
+7. [x] Detail view: ~~pop up~~ or **separate page**
 8. Something cool and Extra: 
       * [x] **individual buttons that allow message to be deleted**
       * [x] additional form elements: **name**
