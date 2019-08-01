@@ -17,7 +17,7 @@ const messages = ({messages, deleteMessage}) => {
                             <div>Message:{ message.message } </div>
                         </Link>
                         {/* <button onClick={() => {deleteMessage(message.id)}}> */}
-                        <button onClick={() => Axios.delete(`/messages/${message.id}`, { data: message.id })
+                        <button onClick={() => Axios.delete(`/messages/${message.id}`, { data: message })
                             .then(res => {
                                 console.log(res);
                                 console.log(res.data);

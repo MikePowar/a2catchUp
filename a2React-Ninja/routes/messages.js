@@ -34,11 +34,9 @@ router.post('/', function(req, res, next){
 
 router.delete('/:id', function(req, res){
   console.log(req.body);
-  var deletedMessageId = messages[req.params.id];
-  console.log(req.body);
-  delete messages[req.params.id];
-  messages = messages.filter(e=>e.id!=null);
-  res.send(JSON.stringify(deletedMessageId))
+
+  messages = messages.filter(e=>e.id!=req.params.id);
+  res.send(JSON.stringify('Message Deleted'))
 
   // var messageId = parseInt(deletedMessageId);
   // console.log(deletedMessageId);
