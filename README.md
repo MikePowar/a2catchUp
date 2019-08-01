@@ -2,17 +2,20 @@
 
 REACT / REDUX 
 
-REQUIREMENTS:
-1. Use React and Redux and start assignment with boilerplate create-react-app code
-2. Text-input area - to write message
-3. Button - to add message to the list
-4. preloaded message list data stored in reducer
-5. List of messages - updated with each new added message
-6. Basic styling
-7. Detail view: pop up or separate page
-8. Something cool and Extra: individual buttons that allow message to be deleted & additional form elements
+**REQUIREMENTS:**
 
-Sources: 
+1. [x] Use React and Redux and start assignment with boilerplate create-react-app code
+2. [x] Text-input area - to write message
+3. [x]Button - to add message to the list
+4. [x]preloaded message list data stored in reducer
+5. [x]List of messages - updated with each new added message
+6. [x]Basic styling
+7. [x]Detail view: ~~pop up~~ or **separate page**
+8. Something cool and Extra: 
+      * [x] **individual buttons that allow message to be deleted**
+      * [x] additional form elements: **name**
+
+**Sources:** 
 
      - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
      - And built with the assistance of the following tutorial set: 
