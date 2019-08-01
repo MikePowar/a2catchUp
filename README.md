@@ -13,7 +13,7 @@ REQUIREMENTS:
 8. Something cool and Extra: individual buttons that allow message to be deleted & additional form elements
 
 Sources: 
--This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
--And built with the assistance of the following tutorial set: 
-     *https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
+     - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+     - And built with the assistance of the following tutorial set: 
+          * https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
 
