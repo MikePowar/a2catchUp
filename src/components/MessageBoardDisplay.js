@@ -24,9 +24,7 @@ class MessageBoardDisplay extends Component {
         }
         return(
             <div>
-                <Messages messages deleteMessage>
-
-                </Messages>
+                <Messages messages deleteMessage />
                 <AddMessage addMessage={this.addMessage}/>
             </div>
         );

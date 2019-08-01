@@ -12,31 +12,93 @@ code {
     monospace;
 }
 
+:root {
+  --mainColor: #FFE400;
+  --submissionColor: #5AB9EA;
+}
+
 .message {
-  width: 15em;
-  border: 1px solid #333;
-  padding: 8px 12px;
+  width: 110%;
+  /* border: 1px solid #333; */
+  padding: 10px;
+  position: center;
+  display: inline-flexbox;
+  margin: auto;
+  text-decoration: none;
+  /* Hover transition code from: https://css-tricks.com/having-fun-with-link-hover-effects/  */
+  background:
+  linear-gradient(
+    to bottom, var(--mainColor) 0%,
+    var(--mainColor) 50%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+color: #000;
+transition: background-size .2s;
+}
+
+.message:hover {
+  background-size: 2px 50px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.fieldTypeName {
+  color: #828282;
+  padding-bottom: 0.25em;
+  font-weight: bolder;
+}
+
+.fieldTypeMessage {
+  color: #000000;
+  text-justify: inter-word;
+  text-align: justify;
+  padding-bottom: 0.25em;
+  font-weight: bolder
 }
 
 .messageList {
-  width: 16.55em;
-  border: 20px solid #6395F2;
+  width: 25em;
+  /* border: 10px solid #6395F2; */
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
+
 }
 
 .submissionBox {
-  border: 20px solid #0A337F;
-  margin-left: auto;
+  border: 5px solid #0A337F;
+  margin-left: 10px;
   margin-right: auto;
   padding: 10px;
   margin-top: 20px;
-  max-width: 500px;
+  width: 27.5em;
+  display: inline-block;
+  background:
+  linear-gradient(
+    to bottom, var(--submissionColor) 0%,
+    var(--submissionColor) 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  left:0px;
+  bottom:0;
+}
+
+.submissionBox:hover {
+  background-size: 2px 50px;
 }
 
 .addMessage {
-  padding: 10px;
+  padding: 5px;
   margin: auto;
 }
 
@@ -45,15 +107,31 @@ input[type=text]{
 }
 
 input[id=name]{
-  margin: 10px;
+  margin: 4px;
+  padding: 5px;
+  width: 30em;
   box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  font-size: 12px;
 }
 
 input[id=message] {
   width: 30em;
-  padding: 12px 10px;
-  margin: 8px 15px;
+  padding: 5px;
+  margin: 4px;
   box-sizing: border-box;
+  display: inline-block;
+  text-align: left;
+  font-size: 12px;
+}
+
+.label {
+  text-align: top;
+  display: block;
+  float: left;
+  width: 10em;
+  margin-right: 1em;
 }
 
 /* new css styling */
@@ -62,49 +140,115 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #091834;
+  background-color: #5DA2D5;
   text-align: right;
-  border: 1px solid #091834;
-  height: 40px;
+  border: 1px solid #5DA2D5;
+  height: 30px;
 }
 
 li {
   display: inline;
   text-align: justify;
+  position: sticky;
   
 }
 
 li a {
   display: block inline;
+  position: sticky;
   color: white;
-  padding: 14px 16px;
+  padding: 16px 16px;
   text-decoration: none;
   text-align: justify;
   border: 5px;
   font-size: 1.7em;
+  white-space: nowrap;
+  margin: 0;
 }
+
+
 
 li a:hover {
   background-color: #235DC7;
 }
 
 h1 {
-  padding: 10px 16px;
-  font-size: 2.0em;
+  padding: 2.5px 12px;
+  font-size: 2.5em;
+  line-height: 5px;
+  font-weight: bold;
 }
 
 h4 {
-  padding: 2.5px 2.5px;
-  text-align: center;
+  padding: 2px;
+  text-align: left;
+  font-size: 1.5em;
+  margin-left: 3.75em;
 }
 
 p{
   text-align: center;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 form{
   padding: 14px 16px;
   position: relative;
   text-align: center;
+}
 
+/* More new styling */
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: 'Allerta', Helvetica, Arial, sans-serif; */
+  font-family: 'Molengo', Georgia, Times, serif;
+
+}
+
+p, div {
+  /* font-family: 'Crimson Text', Georgia, Times, serif; */
+  /* font-family: 'Goudy Bookletter 1911', Georgia, Times, serif; */
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.removeButton{
+  background-color: white;
+  outline-color: black 0.25em;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: .35em;
+  border-radius: 4px;
+  float: right;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.removeButton:hover,
+.removeButton:focus{
+  background: #ceebfd;
+}
+
+.submitButton{
+  background-color: #C1C8E4;
+  outline-color: black 0.25em;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: .35em;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 0;
+  line-height: 1.15;
+  width: 36em;
+}
+
+.submitButton:hover,
+.submitButton:focus{
+  background: #86C232;
 }

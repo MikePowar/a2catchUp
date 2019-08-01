@@ -10,8 +10,7 @@ class AddMessage extends Component{
         super(props);
         this.state = {
             name: '',
-            message: '',
-            id: ''
+            message: ''
         };
     }
 
@@ -23,10 +22,8 @@ class AddMessage extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
-        let idGenerator = Math.floor(Math.random() *20000);
         const newState = {
-            ...this.state,
-            id: idGenerator
+            ...this.state
         }
         console.log(newState);
         this.props.addMessage(newState);
@@ -39,15 +36,15 @@ class AddMessage extends Component{
             <div>
                 <form className="submissionBox" onSubmit={this.handleSubmit}>
                     <div>
-                        <label htmlFor="name">Artist:</label>
-                        <input type="text" id="name" onChange={this.handleChange} />
+                        <label className="label" htmlFor="name"></label>
+                        <input type="text" placeholder="NAME" id="name" onChange={this.handleChange} />
                     </div>
 
                     <div>
-                        <label htmlFor="message">Lyrics:</label>
-                        <input type="text" placeholder="enter lyrics here" id="message" onChange={this.handleChange} />
+                        <label className="label" htmlFor="message"></label>
+                        <input type="text" placeholder="MESSAGE" id="message" onChange={this.handleChange} />
                     </div>
-                    <button>Submit</button>
+                    <button className="submitButton" >Submit</button>
                 </form>
             </div>
         ) 

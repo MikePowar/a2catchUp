@@ -9,6 +9,7 @@ const Message = require('../../models/Message');
 // @access Public
 router.get('/', (req, res) => {
     Message.find()
+        .sort({ date: -1 })
         .then(messages => res.json(messages))
 })
 
@@ -18,8 +19,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const newMessage = new Message({
         name: req.body.name,
-        message: req.body.message,
-        id: req.body.id
+        message: req.body.message
     });
     newMessage.save().then(message => res.json(message));
 });

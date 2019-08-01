@@ -12,8 +12,9 @@ const MessageSchema = new Schema({
         type: String,
         required: true
     },
-    id: {
-        type: String
+    date: {
+        type: Date,
+        default: Date.now
     }
 });
 
