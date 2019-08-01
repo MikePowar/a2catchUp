@@ -1,72 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+436 Assignment 3
+**Node & Express**
 
-And built with the assistance of the following tutorial set: 
-https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
+**REQUIREMENTS:**
 
-## Available Scripts
+1. [x] use Node AND Express
+2. [x] Initial data(messages) should be loaded using a GET request to your server
+3. [x] You can add a new ~~question~~ message using a ~~PUT~~ or **POST request**
+4. [x] One additional server request: delete a message
+5. [x] Handle calls asynchronously: used **REDUX-THuNK** for GET & POST, while delete call is within component
+6. [?] Something cool & extra: changed some styling, but I would say its okay as opposed to cool.
 
-In the project directory, you can run:
 
-### `npm start`
+**Sources:** 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+     - thunk tutorial 
+          * (https://alligator.io/redux/redux-thunk/)
+     - How to Create Listing, Add, Edit and Delete API Using React Axios
+          * (https://www.js-tutorials.com/react-js/how-to-create-listing-add-edit-and-delete-api-using-react-axios/)
+     - Express web framework (Node.js/JavaScript)
+          * (https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
+     - Best JavaScript code snippets using express.Router.delete
+          * (https://www.codota.com/code/javascript/functions/express/Router/delete)
+     - Using Axios with React
+          * (https://alligator.io/react/axios-react/)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# a2catchUp
+    
