@@ -3,12 +3,12 @@
 
 **REQUIREMENTS:**
 
-1. [x] use Node AND Express
-2. [x] Initial data(messages) should be loaded using a GET request to your server
-3. [x] You can add a new ~~question~~ message using a ~~PUT~~ or **POST request**
-4. [x] One additional server request: delete a message
-5. [x] Handle calls asynchronously: used **REDUX-THuNK** for GET & POST, while delete call is within component
-6. [?] Something cool & extra: changed some styling, but I would say its okay as opposed to cool.
+1 [x] use Node AND Express
+2 [x] Initial data(messages) should be loaded using a GET request to your server
+3 [x] You can add a new ~~question~~ message using a ~~PUT~~ or **POST request**
+4 [x] One additional server request: delete a message
+5 [x] Handle calls asynchronously: used **REDUX-THuNK** for GET & POST, while delete call is within component
+6 [ ] Something cool & extra: changed some styling, but I would say its okay as opposed to cool.
 
 
 **Sources:** 
