@@ -13,7 +13,13 @@ REQUIREMENTS:
 8. Something cool and Extra: individual buttons that allow message to be deleted & additional form elements
 
 Sources: 
+
      - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
      - And built with the assistance of the following tutorial set: 
           * https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
+     - https://daveceddia.com/redux-tutorial/
+     - The Net Ninja: React tutorial:  
+          *     https://www.youtube.com/watch?v=OxIDLw0M-m0&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
+     - Redux thunk: https://alligator.io/redux/redux-thunk/
+     - https://www.robinwieruch.de/
 
