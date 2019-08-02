@@ -9,7 +9,6 @@ class Home extends Component {
         console.log(this.props)
         return (
         <div>
-            <h4>Assemble your messages here</h4>
             <MessageBoardDisplay />
         </div>
         )

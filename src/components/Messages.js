@@ -26,9 +26,8 @@ const messages = ({messages, deleteMessage}) => {
                         </div>
                         <Link className="link" to={'/messages/' + message._id }>
                             <div className="fieldTypeName">{ message.name } </div>
-                            <div className="fieldTypeMessage">Message:{ message.message } </div>
+                            <div className="fieldTypeMessage"> => { message.message } </div>
                         </Link>
-
                     </div>
                 )
             })}

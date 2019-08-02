@@ -23,9 +23,13 @@ class MessageBoardDisplay extends Component {
             return <div>Loading...</div>;
         }
         return(
-            <div>
-                <Messages messages deleteMessage />
-                <AddMessage addMessage={this.addMessage}/>
+            <div className="pageBodyContainer">
+                <div className="bodyMarginLeft"></div>
+                <div className="pageBodyCenter">
+                    <Messages messages deleteMessage />
+                    <AddMessage addMessage={this.addMessage}/>
+                </div>
+                <div className="bodyMarginRight"></div>
             </div>
         );
     }

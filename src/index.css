@@ -1,10 +1,11 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
 }
 
 code {
@@ -14,11 +15,11 @@ code {
 
 :root {
   --mainColor: #FFE400;
-  --submissionColor: #5AB9EA;
+  --submissionColor: #F48271 ;
 }
 
 .message {
-  width: 110%;
+  width: 100%;
   /* border: 1px solid #333; */
   padding: 10px;
   position: center;
@@ -36,6 +37,7 @@ code {
   background-size: 4px 4px;
 color: #000;
 transition: background-size .2s;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .message:hover {
@@ -50,6 +52,7 @@ transition: background-size .2s;
   color: #828282;
   padding-bottom: 0.25em;
   font-weight: bolder;
+  font-size: 1.75vh 1.75vw;
 }
 
 .fieldTypeMessage {
@@ -57,27 +60,34 @@ transition: background-size .2s;
   text-justify: inter-word;
   text-align: justify;
   padding-bottom: 0.25em;
-  font-weight: bolder
+  font-weight: bolder;
+  font-size: 1.75vh 1.75vw;
 }
 
 .messageList {
   width: 25em;
-  /* border: 10px solid #6395F2; */
-  padding: 10px;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: center;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+  display: block;
+  overflow: none;
+  position: sticky;
 
 }
 
 .submissionBox {
+  align-self: center;
   border: 5px solid #0A337F;
-  margin-left: 10px;
+  position: relative; left: 1em;
+  margin-left: auto;
   margin-right: auto;
-  padding: 10px;
   margin-top: 20px;
-  width: 27.5em;
-  display: inline-block;
+  margin-bottom: 20px;
+  width: 30em;
+  display: block;
   background:
   linear-gradient(
     to bottom, var(--submissionColor) 0%,
@@ -86,20 +96,12 @@ transition: background-size .2s;
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
-  position: relative;
-  position: -webkit-sticky;
-  position: sticky;
-  left:0px;
-  bottom:0;
+  transition: background-size .6s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .submissionBox:hover {
   background-size: 2px 50px;
-}
-
-.addMessage {
-  padding: 5px;
-  margin: auto;
 }
 
 input[type=text]{
@@ -136,34 +138,43 @@ input[id=message] {
 
 /* new css styling */
 
+.navLinks{
+  grid-area: navlinks;
+}
+
 ul {
+  margin-left: 0; 
   list-style: none;
+  text-align: right;
+  align-self: flex-end;
+  z-index: 10;
+}
+
+.colorBar {
+  border: 20px solid #5DA2D5;
+  background-color: #5DA2D5;
   margin: 0;
   padding: 0;
-  background-color: #5DA2D5;
-  text-align: right;
-  border: 1px solid #5DA2D5;
-  height: 30px;
+  
 }
 
 li {
   display: inline;
-  text-align: justify;
   position: sticky;
-  
+  text-align: center;
+  z-index: 11;
 }
 
 li a {
-  display: block inline;
   position: sticky;
-  color: white;
+  color: black;
   padding: 16px 16px;
   text-decoration: none;
-  text-align: justify;
   border: 5px;
   font-size: 1.7em;
   white-space: nowrap;
   margin: 0;
+  z-index: 12;
 }
 
 
@@ -173,10 +184,16 @@ li a:hover {
 }
 
 h1 {
-  padding: 2.5px 12px;
+  padding: 10px 10px;
   font-size: 2.5em;
-  line-height: 5px;
   font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navTitle {
+  grid-column-start: 2;
+  text-align: center;
 }
 
 h4 {
@@ -188,13 +205,14 @@ h4 {
 
 p{
   text-align: center;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 15px;
+  margin-top: 15px;
+  margin-bottom: 0.5em;
 }
 
 form{
   padding: 14px 16px;
-  position: relative;
   text-align: center;
 }
 
@@ -235,7 +253,7 @@ p, div {
 }
 
 .submitButton{
-  background-color: #C1C8E4;
+  background-color: #FFDA4E;
   outline-color: black 0.25em;
   padding: 4px;
   text-align: center;
@@ -250,5 +268,77 @@ p, div {
 
 .submitButton:hover,
 .submitButton:focus{
-  background: #86C232;
+  background: #AEB8DC;
 }
+
+.navBarContainer{
+  display: grid;
+  grid-template-areas: "blank navTitle navlinks";
+  grid-template-columns: repeat(3,1fr); 
+  width: 100%;
+  top: 0;
+  border-radius: 0;
+}
+
+.blank{
+  grid-area: blank;
+}
+
+.fixedContainer{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.pageBodyContainer{
+  padding-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "bodyMarginLeft pageBodyCenter bodyMarginRight";
+}
+
+.bodyMarginLeft{
+  grid-area: bodyMarginLeft;
+  background-color: #ADDDBD
+  /* background-color: #1f1a1c;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+}
+
+.bodyMarginRight{
+  grid-area: bodyMarginRight;
+  background-color: #ADDDBD;
+  /* background-color: #1f1a1c;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+}
+
+.pageBodyCenter{
+  grid-column-start: 2;
+  border: thick double #32a1ce;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navBar{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.main{
+  padding: 16px;
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.preScroll{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 2;
+
+}
+

@@ -13,11 +13,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
+          <Navbar className="navBar"/>
+          <div className="preScroll" />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/messages/:_id" component={ClickedMessage} />
-          
         </div>
       </BrowserRouter>
 
