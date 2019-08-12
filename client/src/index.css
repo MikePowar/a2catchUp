@@ -1,0 +1,344 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --mainColor: #FFE400;
+  --submissionColor: #F48271 ;
+}
+
+.message {
+  width: 100%;
+  /* border: 1px solid #333; */
+  padding: 10px;
+  position: center;
+  display: inline-flexbox;
+  margin: auto;
+  text-decoration: none;
+  /* Hover transition code from: https://css-tricks.com/having-fun-with-link-hover-effects/  */
+  background:
+  linear-gradient(
+    to bottom, var(--mainColor) 0%,
+    var(--mainColor) 50%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+color: #000;
+transition: background-size .2s;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.message:hover {
+  background-size: 2px 50px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.fieldTypeName {
+  color: #828282;
+  padding-bottom: 0.25em;
+  font-weight: bolder;
+  font-size: 1.75vh 1.75vw;
+}
+
+.fieldTypeMessage {
+  color: #000000;
+  text-justify: inter-word;
+  text-align: justify;
+  padding-bottom: 0.25em;
+  font-weight: bolder;
+  font-size: 1.75vh 1.75vw;
+}
+
+.messageList {
+  width: 25em;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  overflow: none;
+  position: sticky;
+
+}
+
+.submissionBox {
+  align-self: center;
+  border: 5px solid #0A337F;
+  position: relative; left: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 30em;
+  display: block;
+  background:
+  linear-gradient(
+    to bottom, var(--submissionColor) 0%,
+    var(--submissionColor) 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  transition: background-size .6s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submissionBox:hover {
+  background-size: 2px 50px;
+}
+
+input[type=text]{
+  resize: vertical;
+}
+
+input[id=name]{
+  margin: 4px;
+  padding: 5px;
+  width: 30em;
+  box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  font-size: 12px;
+}
+
+input[id=message] {
+  width: 30em;
+  padding: 5px;
+  margin: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: left;
+  font-size: 12px;
+}
+
+.label {
+  text-align: top;
+  display: block;
+  float: left;
+  width: 10em;
+  margin-right: 1em;
+}
+
+/* new css styling */
+
+.navLinks{
+  grid-area: navlinks;
+}
+
+ul {
+  margin-left: 0; 
+  list-style: none;
+  text-align: right;
+  align-self: flex-end;
+  z-index: 10;
+}
+
+.colorBar {
+  border: 20px solid #5DA2D5;
+  background-color: #5DA2D5;
+  margin: 0;
+  padding: 0;
+  
+}
+
+li {
+  display: inline;
+  position: sticky;
+  text-align: center;
+  z-index: 11;
+}
+
+li a {
+  position: sticky;
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  border: 5px;
+  font-size: 1.7em;
+  white-space: nowrap;
+  margin: 0;
+  z-index: 12;
+}
+
+
+
+li a:hover {
+  background-color: #235DC7;
+}
+
+h1 {
+  padding: 10px 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navTitle {
+  grid-column-start: 2;
+  text-align: center;
+}
+
+h4 {
+  padding: 2px;
+  text-align: left;
+  font-size: 1.5em;
+  margin-left: 3.75em;
+}
+
+p{
+  text-align: center;
+  font-size: 20px;
+  line-height: 15px;
+  margin-top: 15px;
+  margin-bottom: 0.5em;
+}
+
+form{
+  padding: 14px 16px;
+  text-align: center;
+}
+
+/* More new styling */
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: 'Allerta', Helvetica, Arial, sans-serif; */
+  font-family: 'Molengo', Georgia, Times, serif;
+
+}
+
+p, div {
+  /* font-family: 'Crimson Text', Georgia, Times, serif; */
+  /* font-family: 'Goudy Bookletter 1911', Georgia, Times, serif; */
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.removeButton{
+  background-color: white;
+  outline-color: black 0.25em;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: .35em;
+  border-radius: 4px;
+  float: right;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.removeButton:hover,
+.removeButton:focus{
+  background: #ceebfd;
+}
+
+.submitButton{
+  background-color: #FFDA4E;
+  outline-color: black 0.25em;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: .35em;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 0;
+  line-height: 1.15;
+  width: 36em;
+}
+
+.submitButton:hover,
+.submitButton:focus{
+  background: #AEB8DC;
+}
+
+.navBarContainer{
+  display: grid;
+  grid-template-areas: "blank navTitle navlinks";
+  grid-template-columns: repeat(3,1fr); 
+  width: 100%;
+  top: 0;
+  border-radius: 0;
+}
+
+.blank{
+  grid-area: blank;
+}
+
+.fixedContainer{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.pageBodyContainer{
+  padding-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "bodyMarginLeft pageBodyCenter bodyMarginRight";
+}
+
+.bodyMarginLeft{
+  grid-area: bodyMarginLeft;
+  background-color: #ADDDBD
+  /* background-color: #1f1a1c;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+}
+
+.bodyMarginRight{
+  grid-area: bodyMarginRight;
+  background-color: #ADDDBD;
+  /* background-color: #1f1a1c;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+}
+
+.pageBodyCenter{
+  grid-column-start: 2;
+  border: thick double #32a1ce;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navBar{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.main{
+  padding: 16px;
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.preScroll{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 2;
+
+}
+

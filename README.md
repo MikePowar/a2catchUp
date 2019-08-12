@@ -1,28 +1,22 @@
-436 Assignment 2
-
-REACT / REDUX 
+436 Assignment 4
+**MongoDB**
 
 **REQUIREMENTS:**
 
-1. [x] Use React and Redux and start assignment with boilerplate create-react-app code
-2. [x] Text-input area - to write message
-3. [x] Button - to add message to the list
-4. [x] preloaded message list data stored in reducer
-5. [x] List of messages - updated with each new added message
-6. [x] Basic styling
-7. [x] Detail view: ~~pop up~~ or **separate page**
-8. Something cool and Extra: 
-      * [x] **individual buttons that allow message to be deleted**
-      * [x] additional form elements: **name**
+1. [x] Use MongoDB
+2. [x] Initial data(messages) should be in the database
+3. [x] Add Message: **adds message to database** & **data is persistent**
+4. [x] Additional functionality: **Deleting an existing message**
+
 
 **Sources:** 
 
-     - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-     - And built with the assistance of the following tutorial set: 
-          * https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
-     - https://daveceddia.com/redux-tutorial/
-     - The Net Ninja: React tutorial:  
-          *     https://www.youtube.com/watch?v=OxIDLw0M-m0&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
-     - Redux thunk: https://alligator.io/redux/redux-thunk/
-     - https://www.robinwieruch.de/
-
+     - Learn the MERN Stack: **Traversy Media** 
+          * (https://www.youtube.com/playlist?list=PLillGF-RfqbbiTGgA77tGO426V3hRF9iE)
+     - An Easy Way to Get Started with the MERN Stack
+          * (https://alligator.io/react/mern-stack-intro/)
+     - Mongoose CRUD (Create, Read, Update, Delete)
+          * (https://coursework.vschool.io/mongoose-crud/)
+     - Express Tutorial Part 3: Using a Database (with Mongoose) **MDN web docs**
+          * (https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+  
