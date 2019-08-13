@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "client-install": "npm install --prefix mp436Assignments",
+    "client-install": "npm install --prefix mpagoraboard",
     "start": "node ./server.js",
     "server": "nodemon ./server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
