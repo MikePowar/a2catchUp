@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 //bodyparser: take requests and get data from body - ie from requests
 const bodyparser = require('body-parser');
+const path = require('path');
 
 const messages = require('./routes/api/messages')
 
@@ -24,6 +25,14 @@ mongoose
 //Use routes
 app.use('/api/messages', messages);
 
+if (process.env.NODE_ENV === 'production') {
+    //set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 
 //NOTE below changed to local - 8000 from deployment tutorial (if problems...go to 5000)
 //setting up port: Herouku Deployment  || local - 5000
@@ -34,15 +43,15 @@ app.listen(port, () => console.log(`Server started on port ${port}`));
 //BELOW ADDED from : https://coursework.vschool.io/deploying-mern-with-heroku/
 
 // ... other imports 
-const path = require("path")
+//const path = require("path")
 
 // ... other app.use middleware 
 //app.use(express.static(path.join(__dirname, "client", "build")))
 
 // ...
 // Right before your app.listen(), add this:
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "public", "index.html"));
-});
+//app.get("*", (req, res) => {
+//    res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+//});
 
 //app.listen(8000);
