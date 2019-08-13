@@ -1,6 +1,7 @@
 //Remember to go back and update package.json file in the a2React-Ninja folder (express)
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 
 //bodyparser: take requests and get data from body - ie from requests
 const bodyparser = require('body-parser');
@@ -51,7 +52,7 @@ app.listen(port, () => console.log(`Server started on port ${port}`));
 // ...
 // Right before your app.listen(), add this:
 //app.get("*", (req, res) => {
-//    res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+//    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 //});
 
 //app.listen(8000);
