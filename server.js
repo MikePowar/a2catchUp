@@ -15,7 +15,6 @@ app.use(bodyparser.json());
 
 //DB Config
 const db = require('./config/keys').mongoURI;
-const dbHeroku = require('./config/keys').mongodbURI;
 
 //Connect to Mongo
 mongoose
