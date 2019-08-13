@@ -5,7 +5,6 @@ const path = require('path');
 
 //bodyparser: take requests and get data from body - ie from requests
 const bodyparser = require('body-parser');
-const path = require('path');
 
 const messages = require('./routes/api/messages')
 
