@@ -15,7 +15,7 @@ const Navbar = () => {
             </div>
         </nav>
         <div className="colorBar"/>
-        <p>Assemble your messages here </p>
+        <p>Assemble your messages below </p>
         </div>
     )
 }
